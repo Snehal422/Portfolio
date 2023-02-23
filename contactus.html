@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Personal Portfolio - Snehal More contact us</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script defer src="action.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+      <!-- Template Stylesheet -->
+    <link href="style.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="hero" style="background: black;">
+            <nav>
+                <h2  class="logo" >Portfo<span>lio</span></h2>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">About Us</a></li>
+                    <li><a href="index.html">Services</a></li>
+                    <li><a href="index.html">Contact Us</a></li>
+                </ul>
+                <a href="#" class="btn">My CV</a>
+            </nav>
+
+        </div>
+
+
+        <div id="contact">
+
+
+            <div class="contact-sites">
+                <p><h1>Contact Me!</h1></p>
+               
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <p style="font-size: 25px; padding: 5%;">Let me give you a <span>Beautiful Website ! </span></p>
+            </div>
+
+
+            <form method="post" name="submit-to-google-sheet" action="action.js">
+                <table>
+                    <tr>
+                        <td class="title" >Name</td> <br>
+                        <td><input type="text" placeholder="Name" id="username" required name="Name"></td>
+                    </tr>
+                    <tr>
+                        <td class="title">Email</td> <br>
+                        <td><input type="text" placeholder="E-Mail"  id="usermail" required name="Email"> </td>
+                    </tr>
+                    <tr>
+                        <td class="title" >How Could I Help you?</td> <br>
+                        <td><input type="text" placeholder="Message" style="height: 100pt;" id="usertext" required name="Text">
+                            <br><label class="error" id="error">Error</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                           <!-- <button type="submit" style="width: 100%;">Submit</button> -->
+                           <input type="submit" name="submit"class="button"  value="submit" id="submitbtn" onclick="check()">
+                        </td>
+                    </tr>
+                </table>
+
+            </form>
+
+            
+        
+        </div>
+
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbx6-zZUemquHqh0sfktA7JljVuXOKOqkEY9OEe3iXaG6kwBgxEHL2_REPi7dEv4gNnL/exec'
+            const form = document.forms['submit-to-google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+      
+    </body>
+
+   
+</html>

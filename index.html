@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Personal Portfolio - Snehal More</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script defer src="action.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- Template Stylesheet -->
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="hero" style="background: black;" id="content">
+        <nav>
+            <h2 class="logo">Portfo<span>lio</span></h2>
+
+            <ul>
+                <li><a href="#content">Home</a></li>
+                <li><a href="#aboutme" class="me">About Me</a></li>
+                <li><a href="#services1">Services</a></li>
+                <li><a href="#contactme">Contact Us</a></li>
+            </ul>
+            <a href="#" class="btn">My CV</a>
+        </nav>
+
+    </div>
+    <div class="content">
+        <h4>Hey, my name is</h4>
+        <h1>Snehal<span> More</span></h1>
+        <h3>I'am a Web Devloper</h3>
+        <!-- <img src="images/img1.jpg" alt=""> -->
+        <div class="newsletter">
+            <p> I like to craft solid and scalable frontend products with great user experiences</p>
+
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="main" id="aboutme">
+        <div class="aboutus">
+            <img src="img1.jpeg" alt="">
+            <div class="about-text">
+                <h2>WHO I AM?</h2>
+                <h5>Devloper <span>& Designer</span></h5>
+                <p>Hey, my name is Snehal More.
+                    I am a front and web developer.
+                    I can provide clean code and pixel perfect design.
+                    Also make the website more and more interactive with animations.
+                    It is very important that your website looks cool and atractive with ease.
+                    Apart from that I could provide you service as s full stack devloper.
+                </p>
+                <button type="button">Let's Talk</button>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- service section -->
+    <div class="services" id="services1">
+        <div class="title">
+            <h2>Our Services</h2>
+        </div>
+
+        <div class="box">
+
+            <div class="card">
+                <i class="fa-sharp fa-solid fa-palette"></i>
+                <h5>Front-End Design</h5>
+                <div class="pra">
+                    <p>I can provide beautiful and atractive designs for your wbsites or apps
+                        and make it outstanding one.
+                    </p>
+                    <p style="text-align:center">
+                        <a class="button" href="#">Read More</a>
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+                <i class="fa-sharp fa-solid fa-object-group"></i>
+                <h5>Web Development</h5>
+                <div class="pra">
+                    <p>Responsiveness is also important thing for website.Not only for design but also for
+                        responsiveness I can help you.
+
+                    </p>
+                    <p style="text-align:center">
+                        <a class="button" href="#">Read More</a>
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h5>Full-Stack Development</h5>
+                <div class="pra">
+                    <p>I could provide service as a full stack developer and make a whole application for you.
+                    </p>
+                    <p style="text-align:center">
+                        <a class="button" href="#">Read More</a>
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Contact Me -->
+
+    <div id="contactme">
+        <div class="contact-me">
+            <p>Let Me get You A Beautiful Website.</p>
+            <a class="button" href="./contactus.html">Hire Me</a>
+
+        </div>
+    </div>
+
+
+    <footer>
+        <p>Snehal More</p>
+        <p style="font-size: 25px;">Contact me to get a Beautiful website for you</p>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <p class="end">CopyRight By Sneahl More</p>
+    </footer>
+
+
+
+    <div>
+        <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        </div>
+
+
+        <script>let mybutton = document.getElementById("btn-back-to-top");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+              scrollFunction();
+            };
+            
+            
+            
+            function scrollFunction() {
+              if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+              ) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            mybutton.addEventListener("click", backToTop);
+            
+            function backToTop() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
+            </script>
+</body>
+
+</html>
